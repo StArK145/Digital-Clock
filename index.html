@@ -26,22 +26,30 @@
         .container p {
             color: white;
             font-family: ClockFont;
-            font-size: 5vw;
+            font-size:clamp(50px,5vw,300px);
         }
         #clock-Container{
             background-color: yellow;
-            height: 60px;
+            height: clamp(45px,5vh,500px);
             display: flex;
+            padding: 5px 10px;
             align-items: center;
             justify-content: center;
-            width: 200px;
-            border-radius: 30px;
+            width: clamp(200px,30vw,400px);
+            border-radius: 20px;
         }
         #clock{
-            font-size: 2rem;
+            font-size:clamp(30px,4vw,150px);
             color: gray;
             font-weight: 900;
             font-family: ClockFont;
+        }
+        @media (min-width:1441px) {
+            #clock-Container{
+                border-radius: 30px;
+                height: 10vh;
+                width: 20vw;
+            }
         }
     </style>
 </head>
