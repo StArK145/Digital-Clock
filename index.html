@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        @font-face {
+            font-family: ClockFont;
+            src: url(./fonts/Technology-BoldItalic.ttf);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: black;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+        }
+        .container p {
+            color: white;
+            font-family: ClockFont;
+            font-size: 5vw;
+        }
+        #clock-Container{
+            background-color: yellow;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            border-radius: 30px;
+        }
+        #clock{
+            font-size: 2rem;
+            color: gray;
+            font-weight: 900;
+            font-family: ClockFont;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Digital Clock</p>
+        <div id="clock-Container" >
+            <span id="clock" ></span>
+        </div>
+    </div>
+</body>
+<script>
+    const time = document.getElementById('clock')
+    setInterval(function (){
+        let date = new Date();
+        time.innerHTML = date.toLocaleTimeString();
+    },1000)
+</script>
+</html>
